@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uchcode</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+<html lang="ru">
+    <head>
+      <meta charset="utf-8" />
+      <title>сайт</title>
+	</head>
+
+    <script type="text/javascript">
+        function Input(){
+        login_ok = false;
+        user_name = "";
+        password = "";
+        user_name = prompt("Логин","");
+        user_name = user_name.toLowerCase();
+        password = prompt("Пароль","");
+        password = password.toLowerCase();
+        if (user_name=="login" && password=="pass") {
+        login_ok = true;
+        window.location = "index.php";
+        }
+        if (user_name=="login2" && password=="pass2") {
+        login_ok = true;
+        window.location = "forum/index.php";
+        }
+        if (login_ok==false) alert("Неверный логин или пароль!");
+        }
+    </script>    
+
+<div class="page">
+    <header class="site-header">UCHICODE_IT</header>
+    <aside class="left-sidebar">Left Sidebar</aside>
+    <section class="main-content">Main Content</section>
+    <aside class="right-sidebar">Регистрация/вход<div align="center"><form><input type="button" value="Войти на сайт" onClick="Input()"></form></div></aside>
+    <footer class="site-footer">Footer</footer>
+</div>
+<style type="text/css">
+    .page
+{
+  background: rgb(255, 255, 255);
+  display: flex;
+  flex-wrap: wrap;
+  font: 18px Helvetica;
+}
+
+.site-header
+{
+  height: 75px;
+  background: rgb(159, 172, 231);
+  width: 100%;
+  font-size: 60px;
+  font-family: "Andele Mono", Georgia, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  color: rgb(19, 4, 53);
+}
+.site-footer
+{
+  height: 75px;
+  background: rgb(159, 172, 231);
+  width: 100%;
+  font-size: 20px;
+  font-family: "Andele Mono", Georgia, sans-serif;
+  font-weight: 100;
+  text-align: center;
+  color: rgb(19, 4, 53);
+}
+.left-sidebar,
+.right-sidebar
+{
+  height: 300px;
+  width: 20%;
+  background: #ddd;
+  text-align: center;
+}
+
+.main-content
+{
+  width: 60%;
+  height: 300px;
+  background: #FFF;
+  text-align: center;
+}
+
+@media only screen and (max-width: 320px) 
+{
+  .site-header
+  {
+    order: 2;
+  }
+  .main-content
+  {
+    order: 1;
+    width: 100%;
+  }
+  .left-sidebar
+  {
+    order: 4;
+    width: 100%;
+  }
+  .right-sidebar
+  {
+    order: 3;
+    width: 100%;
+  }
+  .site-footer
+  {
+    order: 5;
+  }
+}
+</style>
+
